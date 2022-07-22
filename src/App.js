@@ -1,13 +1,14 @@
 import './App.css';
+import React from 'react';
+import Sliderimg from './Components/Sliderimg';
+
 
 function App() {
   return (
-    <div>
-      <h1 className="text-9xl font-bold underline">
-        Hello world!
-      </h1>
+    <div className='min-h-screen'>
+      <Sliderimg />
     </div>
   );
 }
 
-export default App;
+export default App; 
