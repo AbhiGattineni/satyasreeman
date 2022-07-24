@@ -1,13 +1,18 @@
 import './App.css';
 import React from 'react';
 import Sliderimg from './Components/Sliderimg';
+import Whatwedo from './pages/Whatwedo';
+import Business from './pages/Business';
+import WhoWeAre from './pages/Whoweare';
 
 
 function App() {
   return (
     <div className='min-h-screen'>
       <Sliderimg />
-      <div>sgsrhdhjdfhd</div>
+      <Business />
+      <Whatwedo />
+      <WhoWeAre />
     </div>
   );
 }
