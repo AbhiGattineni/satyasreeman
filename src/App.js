@@ -7,6 +7,7 @@ function App() {
   return (
     <div className='min-h-screen'>
       <Sliderimg />
+      <div>sgsrhdhjdfhd</div>
     </div>
   );
 }
