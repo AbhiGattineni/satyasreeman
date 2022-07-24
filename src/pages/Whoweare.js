@@ -10,7 +10,7 @@ const WhoWeAre = () => {
                 </div>
             </div>
             <div className="border border-1 rounded-md bg-white">
-                Meet Us
+                Meet Us Here
             </div>
         </div>
     )
