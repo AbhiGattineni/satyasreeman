@@ -4,6 +4,7 @@ import Sliderimg from './Components/Sliderimg';
 import Whatwedo from './pages/Whatwedo';
 import Business from './pages/Business';
 import WhoWeAre from './pages/Whoweare';
+import Cards from './Components/Cards';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className='min-h-screen'>
       <Sliderimg />
       <Business />
+      <Cards />
       <Whatwedo />
       <WhoWeAre />
     </div>
