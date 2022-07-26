@@ -14,7 +14,7 @@ const WhoWeAre = () => {
                 </div>
             </div>
             <div className='border border-1 rounded-md bg-white'>
-                <div className=" md:grid md:grid-cols-2">
+                <div className=" md:grid md:grid-cols-1 lg:grid-cols-2">
                     <Card image={image1} />
                     <Card image={image2} />
                 </div>
