@@ -1,4 +1,4 @@
-import { data } from "../Components/Mediadata";
+import { data } from "../Components/Media_Data"
 
 const Media = () => {
     return (
