@@ -49,7 +49,7 @@ function Sliderimg() {
                     <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>What We Do</a></li>
                     <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Who We Are</a></li>
                     <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Careers</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Mediag</a></li>
+                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Media</a></li>
                     <li className='menu-list mx-2 hover:underline decoration-2'>
                         <div className='mx-3'>
                             <a href="#"><GoMail size={18} style={{ marginTop: '1px' }} /></a>

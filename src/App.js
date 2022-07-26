@@ -4,7 +4,10 @@ import Sliderimg from './Components/Sliderimg';
 import Whatwedo from './pages/Whatwedo';
 import Business from './pages/Business';
 import WhoWeAre from './pages/Whoweare';
-import Cards from './Components/Cards';
+import Careers from './pages/Careers';
+import Media from './pages/Media';
+import Contactus from './pages/Contactus';
+import Footer from './pages/Footer';
 
 
 function App() {
@@ -12,9 +15,12 @@ function App() {
     <div className='min-h-screen'>
       <Sliderimg />
       <Business />
-      <Cards />
       <Whatwedo />
       <WhoWeAre />
+      <Careers />
+      <Media />
+      <Contactus />
+      <Footer />
     </div>
   );
 }
