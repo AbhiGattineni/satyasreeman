@@ -12,7 +12,7 @@ const Whatwedo = () => {
                         What We DO.
                     </div>
                 </div>
-                <div className="md:row-span-2 border border-1 rounded-md bg-white md:grid md:grid-cols-3">
+                <div className="md:row-span-2 border border-1 rounded-md bg-white md:grid md:grid-cols-2 lg:grid-cols-3">
                     <Verticalcard image={image1} />
                     <Verticalcard image={image2} />
                     <Verticalcard image={image3} />
