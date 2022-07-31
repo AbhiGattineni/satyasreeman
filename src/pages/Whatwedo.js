@@ -5,14 +5,14 @@ import Verticalcard from "../Components/Verticalcard";
 
 const Whatwedo = () => {
     return (
-        <div className="w-full bg-slate-100">
-            <div className="md:grid">
+        <div className="w-full bg-white">
+            <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
                     <div className="text-3xl font-bold">
                         What We DO.
                     </div>
                 </div>
-                <div className="md:row-span-2 border border-1 rounded-md bg-white md:grid md:grid-cols-2 lg:grid-cols-3">
+                <div className="md:row-span-3 md:grid md:grid-cols-2 lg:grid-cols-3">
                     <Verticalcard image={image1} />
                     <Verticalcard image={image2} />
                     <Verticalcard image={image3} />

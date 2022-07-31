@@ -2,24 +2,27 @@ import Careerresume from "./Careerresume";
 
 const Careers = () => {
     return (
-        <div className="h-screen w-full bg-slate-100">
-            <div className="text-3xl font-bold text-center">
-                Careers
-            </div>
-            <div className="grid md:grid-cols-1 lg:grid-cols-2 grid-cols-1 border border-spacing-2">
-                <div className="grid grid-cols-1 m-2 border border-spacing-2">
-                    <div className="text-xl font-bold text-center">
-                        Jobs
-                    </div>
-                    <div class="h-30 w-full m-2">
-                        Currently no job postings
+        <div className="w-full bg-white rounded-lg">
+            <div className="md:grid md:grid-rows-4">
+                <div className="md:row-span-1 flex justify-center items-center">
+                    <div className="text-3xl font-bold">
+                        Careers
                     </div>
                 </div>
-                <div className="grid grid-cols-1 m-2 border border-spacing-2">
-                    <div className="text-xl font-bold text-center m-3">
-                        Forward your resume
+                <div className="md:row-span-3">
+                    <div className="grid md:grid-cols-1 lg:grid-cols-2 grid-cols-1">
+                        <div className="grid grid-cols-1 m-5">
+                            <div className="text-xl font-bold text-center mx-10 border border-radius-2 rounded-lg">
+                                Jobs
+                                <div className="m-2 font-light">
+                                    Currently no job postings
+                                </div>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 mx-10">
+                            <Careerresume />
+                        </div>
                     </div>
-                    <Careerresume />
                 </div>
             </div>
         </div>

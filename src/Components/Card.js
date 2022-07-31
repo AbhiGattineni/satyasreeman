@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = (props) => {
     return (
-        <div class="rounded-xl flex flex-col md:flex-row backdrop-blur-sm hover:shadow-black/50 hover:shadow-xl m-5">
+        <div class="rounded-xl flex flex-col md:flex-row backdrop-blur-sm hover:bg-slate-50 hover:shadow-black/50 hover:shadow-xl m-5 border border-radius-2">
             <div className="basis-1/2">
                 <img class=" h-full w-full rounded-xl" src={props.image} alt="" />
             </div>
