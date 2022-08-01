@@ -20,7 +20,7 @@ const Careers = () => {
                             </div>
                         </div>
                         <div className="grid grid-cols-1 mx-10">
-                            <Careerresume />
+                            <Careerresume tag={"Forward Your Resume"} />
                         </div>
                     </div>
                 </div>
