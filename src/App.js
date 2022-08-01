@@ -8,7 +8,6 @@ import Careers from './pages/Careers';
 import Media from './pages/Media';
 import Contactus from './pages/Contactus';
 import Footer from './pages/Footer';
-import Partner from './pages/Partner';
 
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
       <Business />
       <Whatwedo />
       <WhoWeAre />
-      <Partner/>
       <Careers />
       <Media />
       <Contactus />

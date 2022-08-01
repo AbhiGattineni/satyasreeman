@@ -1,4 +1,5 @@
 import { BsArrowRight } from "react-icons/bs";
+import Partner from './Partner';
 
 import Card from '../Components/Card';
 import image1 from "../images/image1.jpg";
@@ -27,7 +28,11 @@ const WhoWeAre = () => {
                         <Card image={image2} />
                     </div>
                 </div>
+                <div class="lg:m-8">
+                    <Partner />
+                </div>
             </div>
+
 
         </div>
     )
