@@ -7,7 +7,7 @@ import image2 from "../images/image2.jpg";
 
 const WhoWeAre = () => {
     return (
-        <div className="w-full bg-white">
+        <div className="w-full bg-white" id="whoweare">
             <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
                     {/* <div className="md:grid md:grid-rows-4"> */}
