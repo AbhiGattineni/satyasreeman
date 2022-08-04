@@ -1,6 +1,6 @@
-import image1 from "../images/image1.jpg";
-import image2 from "../images/image2.jpg";
-import image3 from "../images/image3.jpg";
+import image1 from "../images/general.jpg";
+import image2 from "../images/heavy.jpg";
+import image3 from "../images/infra.jpg";
 import Verticalcard from "../Components/Verticalcard";
 
 const Whatwedo = () => {
@@ -13,9 +13,9 @@ const Whatwedo = () => {
                     </div>
                 </div>
                 <div className="md:row-span-3 md:grid md:grid-cols-2 lg:grid-cols-3">
-                    <Verticalcard image={image1} />
-                    <Verticalcard image={image2} />
-                    <Verticalcard image={image3} />
+                    <Verticalcard image={image1} tag={"General Engineering"} />
+                    <Verticalcard image={image2} tag={"Heavy Engineering"} />
+                    <Verticalcard image={image3} tag={"Infrastructute"} />
                 </div>
             </div>
         </div>

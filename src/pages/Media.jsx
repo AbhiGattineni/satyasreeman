@@ -9,7 +9,7 @@ const Media = () => {
                         Media.
                     </div>
                 </div>
-                <div className="md:row-span-3 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center">
+                <div className="md:row-span-3 grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 justify-items-center">
                     {data.map((item) => (
                         <div>
                             <img className="w-[200px] h-[200px] hover:shadow-2xl hover:scale-110 ease-in-out duration-300" src={item.img} alt=""></img>
