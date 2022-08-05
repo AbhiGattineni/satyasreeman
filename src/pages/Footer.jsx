@@ -1,15 +1,19 @@
+
 import { BsLinkedin, BsInstagram, BsFacebook, BsYoutube } from "react-icons/bs";
+import { Link } from "react-scroll";
 
 const Footer = () => {
     return (
         <div className="bg-slate-800">
-            <div className="flex justify-evenly p-5">
-                <div className="text-white">Business</div>
-                <div className="text-white">What We Do</div>
-                <div className="text-white">Who We Are</div>
-                <div className="text-white">Careers</div>
-                <div className="text-white">Media</div>
-                <div className="text-white">Contact Us</div>
+
+            <div className="grid grid-cols-6 p-5">
+                <Link to="bussiness" spy={true} smooth={true} offset={50} duration={500}><div className="text-white cursor-pointer">Business</div></Link>
+                <Link to="whatwedo" spy={true} smooth={true} offset={50} duration={500}><div className="text-white cursor-pointer">What We Do</div></Link>
+                <Link to="whoweare" spy={true} smooth={true} offset={50} duration={500}><div className="text-white cursor-pointer">Who We Are</div></Link>
+                <Link to="careers" spy={true} smooth={true} offset={50} duration={500}><div className="text-white cursor-pointer">Careers</div></Link>
+                <Link to="media" spy={true} smooth={true} offset={50} duration={500}><div className="text-white cursor-pointer">Media</div></Link>
+                <Link to="contactus" spy={true} smooth={true} offset={50} duration={500}><div className="text-white cursor-pointer">Contact Us</div></Link>
+
             </div>
             <div className="border-t-2 border-grey-300 mx-5"></div>
             <div className="flex flex-row justify-center">

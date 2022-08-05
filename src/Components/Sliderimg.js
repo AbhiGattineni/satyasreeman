@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-scroll';
 import image1 from "../images/image1.jpg";
 import image2 from "../images/image2.jpg";
 import image3 from "../images/image3.jpg";
@@ -7,6 +8,7 @@ import { CgClose } from "react-icons/cg";
 import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
+import "./nav.css";
 
 let count = 0;
 function Sliderimg() {
@@ -38,47 +40,63 @@ function Sliderimg() {
     const showSideMenu = () => {
         (isSideMenuOpen) ? setisSideMenuOpen(false) : setisSideMenuOpen(true)
     }
+
+    const [color, setcolor] = useState(false)
+    const changeColor = () => {
+        if (window.scrollY >= 300) {
+            setcolor(true)
+        }
+        else {
+            setcolor(false)
+        }
+    }
+    window.addEventListener('scroll', changeColor)
     return (
-        <div>
-            <div className='flex flex-row justify-between drop-shadow-md px-5 bg-opacity-0 sticky top-0'>
-                <div className='md:columns-3 logo p-6 text-xl md:text-md drop-shadow-lg text-black font-bold text-white'>
-                    <h1>SatyaSreeman</h1>
-                </div>
-                <div className='md:columns-9 hidden menu justify-items-start drop-shadow-md list-none lg:flex lg:flex-row text-white uppercase my-7 text-sm'>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Bussines</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>What We Do</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Who We Are</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Careers</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Media</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'>
-                        <div className='mx-3'>
-                            <a href="#"><GoMail size={18} style={{ marginTop: '1px' }} /></a>
-                        </div>
-                    </li>
-                </div>
-                <button onClick={() => { showSideMenu() }} className='lg:hidden menu-button text-white'>
-                    {(isSideMenuOpen) ? <CgClose /> : <FaBars />}
-                    {(isSideMenuOpen) ? SideMenu() : ''}
-                </button>
+        <div id="home">
+            <div className="fixed w-full flex justify-between items-center px-4 md:px-12 h-20" id={color ? "navc" : "navt"}>
+                <Link to='home' spy={true} smooth={true} offset={50} duration={500}>
+                    <h1 className='text-white font-bold text-xl p-3 cursor-pointer'>SATYASREEMAN</h1>
+                </Link>
+                <nav>
+                    <div className='md:columns-9 hidden menu justify-items-start drop-shadow-md list-none lg:flex lg:flex-row text-white uppercase my-7 text-sm'>
+                        <li className='menu-list mx-2 hover:underline decoration-2 cursor-pointer'><Link to='bussiness' spy={true} smooth={true} offset={50} duration={500} className='mx-3 sm:text-xs'>Bussiness</Link></li>
+                        <li className='menu-list mx-2 hover:underline decoration-2 cursor-pointer'><Link to='whatwedo' spy={true} smooth={true} offset={50} duration={500} className='mx-3 sm:text-xs'>What We Do</Link></li>
+                        <li className='menu-list mx-2 hover:underline decoration-2 cursor-pointer'><Link to='whoweare' spy={true} smooth={true} offset={50} duration={500} className='mx-3 sm:text-xs'>Who We Are</Link></li>
+                        <li className='menu-list mx-2 hover:underline decoration-2 cursor-pointer'><Link to='careers' spy={true} smooth={true} offset={50} duration={500} className='mx-3 sm:text-xs'>Careers</Link></li>
+                        <li className='menu-list mx-2 hover:underline decoration-2 cursor-pointer'><Link to='media' spy={true} smooth={true} offset={50} duration={500} className='mx-3 sm:text-xs'>Media</Link></li>
+                        <li className='menu-list mx-2 hover:underline decoration-2 cursor-pointer'>
+                            <div className='mx-3'>
+                                <Link to="contactus" spy={true} smooth={true} offset={50} duration={500}><GoMail size={18} style={{ marginTop: '1px' }} /></Link>
+                            </div>
+                        </li>
+                    </div>
+                    <button onClick={() => { showSideMenu() }} className='lg:hidden menu-button text-white'>
+                        {(isSideMenuOpen) ? <CgClose /> : <FaBars />}
+                        {(isSideMenuOpen) ? SideMenu() : ''}
+                    </button>
+                </nav>
             </div>
-            <div ref={slideRef} className="-mt-20 select-none">
+            <div ref={slideRef} className="select-none">
                 <img src={Images[currentIndex]} alt="image" className="h-screen w-full"></img>
             </div>
             <div className='absolute justify-between flex top-1/2 w-full transform -translate-y-1/2 p-2 items-center'>
                 <button onClick={handleOnPrevClick}><GrPrevious /></button>
                 <button onClick={handleOnNextClick}><GrNext /></button>
             </div>
-        </div >
+        </div>
     );
 }
 
 function SideMenu() {
     return (
-        <div className='fixed drop-shadow-md h-screen w-full sm:w-1/2 md:w-2/5 bg-black top-0 left-0'>
-            <div className='menu list-none text-white flex flex-col text-center mt-14 uppercase py-5 text-sm font-bold'>
-                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>Menu</a></li>
-                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>About Us</a></li>
-                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>Contact us</a></li>
+        <div className='fixed drop-shadow-md h-screen w-full bg-black mt-5 left-0 scroll-none'>
+            <div className='menu list-none text-white flex flex-col text-center mt-14 uppercase py-5 text-sm font-bold uppercase'>
+                <li className='menu-list py-3 hover:border-2'><a href='bussiness' className='px-10'>Business</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='whatwedo' className='px-10'>Whatwedo</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='whoweare' className='px-10'>WhoWeAre</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='careers' className='px-10'>Careers</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='media' className='px-10'>Media</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='contactus' className='px-10'>Contact</a></li>
             </div>
         </div>
     );
