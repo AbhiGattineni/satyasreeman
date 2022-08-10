@@ -9,8 +9,9 @@ import { GrPrevious } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
 
 let count = 0;
-function Sliderimg() {
-    const [isSideMenuOpen, setisSideMenuOpen] = useState(false)
+function Sliderimg({ executeScroll, refs }) {
+    const [isSideMenuOpen, setisSideMenuOpen] = useState(false);
+    const [isOpen, setOpen] = useState(false);;
 
     const Images = [image1, image2, image3];
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -45,14 +46,32 @@ function Sliderimg() {
                     <h1>SatyaSreeman</h1>
                 </div>
                 <div className='md:columns-9 hidden menu justify-items-start drop-shadow-md list-none lg:flex lg:flex-row text-white uppercase my-7 text-sm'>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Bussines</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>What We Do</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Who We Are</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Careers</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'><a href='#' className='mx-3 sm:text-xs'>Media</a></li>
-                    <li className='menu-list mx-2 hover:underline decoration-2'>
+                    <li className='menu-list mx-2  decoration-2' onClick={() => {
+                        executeScroll(refs.businessRef);
+                        if (isOpen) setOpen(false);
+                    }}>Bussines</li>
+                    <li className='menu-list mx-5 sm:text-xs decoration-2' onClick={() => {
+                        executeScroll(refs.whatWeDoRef);
+                        if (isOpen) setOpen(false);
+                    }}>What We Do</li>
+                    <li className='menu-list mx-5 sm:text-xs decoration-2' onClick={() => {
+                        executeScroll(refs.whoWeAreRef);
+                        if (isOpen) setOpen(false);
+                    }}>Who We Are</li>
+                    <li className='menu-list mx-5 sm:text-xs decoration-2' onClick={() => {
+                        executeScroll(refs.careersRef);
+                        if (isOpen) setOpen(false);
+                    }}>Careers</li>
+                    <li className='menu-list mx-5 sm:text-xs decoration-2' onClick={() => {
+                        executeScroll(refs.mediaRef);
+                        if (isOpen) setOpen(false);
+                    }}>Media</li>
+                    <li className='menu-list mx-5 sm:text-xs decoration-2' onClick={() => {
+                        executeScroll(refs.contactRef);
+                        if (isOpen) setOpen(false);
+                    }}>
                         <div className='mx-3'>
-                            <a href="#"><GoMail size={18} style={{ marginTop: '1px' }} /></a>
+                            <GoMail size={18} style={{ marginTop: '1px' }} />
                         </div>
                     </li>
                 </div>
@@ -76,9 +95,12 @@ function SideMenu() {
     return (
         <div className='fixed drop-shadow-md h-screen w-full sm:w-1/2 md:w-2/5 bg-black top-0 left-0'>
             <div className='menu list-none text-white flex flex-col text-center mt-14 uppercase py-5 text-sm font-bold'>
-                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>Menu</a></li>
-                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>About Us</a></li>
-                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>Contact us</a></li>
+                <li className='menu-list py-3 hover:border-2' ><a href='#' className='px-10' >Business</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>What We Do</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>Who We Are</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>Careers</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>Media</a></li>
+                <li className='menu-list py-3 hover:border-2'><a href='#' className='px-10'>Contact Us</a></li>
             </div>
         </div>
     );

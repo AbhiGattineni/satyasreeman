@@ -5,9 +5,10 @@ import Card from '../Components/Card';
 import image1 from "../images/image1.jpg";
 import image2 from "../images/image2.jpg";
 
-const WhoWeAre = () => {
+const WhoWeAre = ({ refer }) => {
     return (
-        <div className="w-full bg-white">
+        <div className="w-full bg-white" ref={refer}>
+            {console.log(refer)}
             <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
                     {/* <div className="md:grid md:grid-rows-4"> */}

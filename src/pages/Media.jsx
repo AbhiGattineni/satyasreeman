@@ -1,8 +1,8 @@
 import { data } from "../Components/Media_Data";
 
-const Media = () => {
+const Media = ({ refer }) => {
     return (
-        <div className="w-full bg-white">
+        <div className="w-full bg-white" ref={refer}>
             <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
                     <div className="text-3xl font-bold">

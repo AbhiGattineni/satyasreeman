@@ -1,8 +1,8 @@
 import Careerresume from "./Careerresume";
 
-const Contactus = () => {
+const Contactus = ({ refer }) => {
     return (
-        <div className="w-full bg-slate-100">
+        <div className="w-full bg-slate-100" ref={refer}>
             <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
                     <div className="text-3xl font-bold">
