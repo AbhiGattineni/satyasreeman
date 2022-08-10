@@ -3,9 +3,9 @@ import image2 from "../images/heavy.jpg";
 import image3 from "../images/infra.jpg";
 import Verticalcard from "../Components/Verticalcard";
 
-const Whatwedo = () => {
+const Whatwedo = ({ refer }) => {
     return (
-        <div className="w-full bg-white" id="whatwedo">
+        <div className="w-full bg-white " ref={refer} id="whatwedo">
             <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
                     <div className="text-3xl font-bold">

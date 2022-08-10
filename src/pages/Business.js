@@ -1,9 +1,9 @@
 
 import { BsArrowRight } from "react-icons/bs";
 
-const Business = () => {
+const Business = ({ refer }) => {
     return (
-        <div className="w-full bg-slate-100" id="bussiness">
+        <div className="w-full bg-slate-100" ref={refer} id="bussiness">
             <div className="md:grid md:grid-cols-3">
                 <div className="row-span-1 md:col-span-1 md:h-screen flex justify-center items-center">
                     <div className="text-3xl font-bold">

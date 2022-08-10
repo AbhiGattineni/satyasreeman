@@ -6,21 +6,36 @@ import Business from './pages/Business';
 import WhoWeAre from './pages/Whoweare';
 import Careers from './pages/Careers';
 import Media from './pages/Media';
+import { useRef } from 'react';
+
 import Contactus from './pages/Contactus';
 import Footer from './pages/Footer';
 
 
 function App() {
+  const businessRef = useRef(null);
+  const whatWeDoRef = useRef(null);
+  const whoWeAreRef = useRef(null);
+  const careersRef = useRef(null);
+  const mediaRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const ref = { businessRef, whatWeDoRef, whoWeAreRef, careersRef, mediaRef, contactRef };
+
+  const executeScroll = (componentRef) => {
+    // console.log(componentRef.current)
+    componentRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className='min-h-screen'>
-      <Sliderimg />
-      <Business />
-      <Whatwedo />
-      <WhoWeAre />
-      <Careers />
-      <Media />
-      <Contactus />
-      <Footer />
+      <Sliderimg executeScroll={executeScroll} refs={ref} />
+      <Business refer={businessRef} />
+      <Whatwedo refer={whatWeDoRef} />
+      <WhoWeAre refer={whoWeAreRef} />
+      <Careers refer={careersRef} />
+      <Media refer={mediaRef} />
+      <Contactus refer={contactRef} />
+      <Footer executeScroll={executeScroll} refs={ref}/>
     </div>
   );
 }
