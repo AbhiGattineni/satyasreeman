@@ -35,7 +35,7 @@ function App() {
       <Careers refer={careersRef} />
       <Media refer={mediaRef} />
       <Contactus refer={contactRef} />
-      <Footer />
+      <Footer executeScroll={executeScroll} refs={ref}/>
     </div>
   );
 }

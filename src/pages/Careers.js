@@ -2,7 +2,7 @@ import Careerresume from "./Careerresume";
 
 const Careers = ({ refer }) => {
     return (
-        <div className="w-full bg-white rounded-lg" ref={refer}>
+        <div className="w-full bg-white rounded-lg" ref={refer} id="careers">
             <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
                     <div className="text-3xl font-bold">

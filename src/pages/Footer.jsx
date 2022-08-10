@@ -1,15 +1,37 @@
+import React, { useState } from 'react';
 import { BsLinkedin, BsInstagram, BsFacebook, BsYoutube } from "react-icons/bs";
 
-const Footer = () => {
+const Footer = ({ executeScroll, refs }) => {
+    const [isOpen, setOpen] = useState(false);
     return (
         <div className="bg-slate-800">
-            <div className="flex justify-evenly p-5">
-                <div className="text-white">Business</div>
-                <div className="text-white">What We Do</div>
-                <div className="text-white">Who We Are</div>
-                <div className="text-white">Careers</div>
-                <div className="text-white">Media</div>
-                <div className="text-white">Contact Us</div>
+
+            <div className="grid grid-cols-6 p-5 list-none">
+                <li to="bussiness" onClick={() => {
+                    executeScroll(refs.businessRef);
+                    if (isOpen) setOpen(false);
+                }}><div className="text-white cursor-pointer">Business</div></li>
+                <li to="whatwedo" onClick={() => {
+                    executeScroll(refs.whatWeDoRef);
+                    if (isOpen) setOpen(false);
+                }}><div className="text-white cursor-pointer">What We Do</div></li>
+                <li to="whoweare" onClick={() => {
+                    executeScroll(refs.whoWeAreRef);
+                    if (isOpen) setOpen(false);
+                }}><div className="text-white cursor-pointer">Who We Are</div></li>
+                <li to="careers" onClick={() => {
+                    executeScroll(refs.careersRef);
+                    if (isOpen) setOpen(false);
+                }}><div className="text-white cursor-pointer">Careers</div></li>
+                <li to="media" onClick={() => {
+                    executeScroll(refs.mediaRef);
+                    if (isOpen) setOpen(false);
+                }}><div className="text-white cursor-pointer">Media</div></li>
+                <li to="contactus" onClick={() => {
+                    executeScroll(refs.contactRef);
+                    if (isOpen) setOpen(false);
+                }}><div className="text-white cursor-pointer">Contact Us</div></li>
+
             </div>
             <div className="border-t-2 border-grey-300 mx-5"></div>
             <div className="flex flex-row justify-center">
@@ -27,13 +49,13 @@ const Footer = () => {
                 } /></div>
                 <div><BsLinkedin className='m-3 mx-5 text-white' size={20} onClick={() =>
                     window.open(
-                        "https://www.linkedin.com/in/abhishek-gattineni-05937088/",
+                        "https://www.liedin.com/in/abhishek-gattineni-05937088/",
                         "_blank"
                     )
                 } /></div>
                 <div><BsYoutube className='m-3 mx-5 text-white' size={20} onClick={() =>
                     window.open(
-                        "https://www.linkedin.com/in/abhishek-gattineni-05937088/",
+                        "https://www.liedin.com/in/abhishek-gattineni-05937088/",
                         "_blank"
                     )
                 } /></div>
