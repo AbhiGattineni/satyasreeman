@@ -12,7 +12,7 @@ const Whatwedo = ({ refer }) => {
                         What We DO.
                     </div>
                 </div>
-                <div className="md:row-span-3 md:grid md:grid-cols-2 lg:grid-cols-3">
+                <div className="md:row-span-2 md:grid md:grid-cols-2 lg:grid-cols-3">
                     <Verticalcard image={image1} tag={"General Engineering"} />
                     <Verticalcard image={image2} tag={"Heavy Engineering"} />
                     <Verticalcard image={image3} tag={"Infrastructute"} />
