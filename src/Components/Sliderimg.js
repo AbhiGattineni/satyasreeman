@@ -40,7 +40,6 @@ function Sliderimg({ executeScroll, refs }) {
     const showSideMenu = () => {
         (isSideMenuOpen) ? setisSideMenuOpen(false) : setisSideMenuOpen(true)
     }
-
     const [color, setcolor] = useState(false)
     const changeColor = () => {
         if (window.scrollY >= 500) {
@@ -92,14 +91,14 @@ function Sliderimg({ executeScroll, refs }) {
                     {(isSideMenuOpen) ? SideMenu() : ''}
                 </button>
             </div>
-            <div ref={slideRef} className="select-none">
-                <img src={Images[currentIndex]} alt="image" className="lg:h-screen md:h-screen w-full"></img>
+            <div ref={slideRef} className="-mt-20 select-none">
+                <img src={Images[currentIndex]} alt="image" className="h-screen w-full"></img>
             </div>
             <div className='absolute justify-between flex top-1/2 w-full transform -translate-y-1/2 p-2 items-center'>
                 <button onClick={handleOnPrevClick}><GrPrevious /></button>
                 <button onClick={handleOnNextClick}><GrNext /></button>
             </div>
-        </div>
+        </div >
     );
 }
 

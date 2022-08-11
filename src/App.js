@@ -10,6 +10,7 @@ import { useRef } from 'react';
 
 import Contactus from './pages/Contactus';
 import Footer from './pages/Footer';
+import Partner from './pages/Partner';
 
 
 function App() {
@@ -32,10 +33,11 @@ function App() {
       <Business refer={businessRef} />
       <Whatwedo refer={whatWeDoRef} />
       <WhoWeAre refer={whoWeAreRef} />
+      <Partner />
       <Careers refer={careersRef} />
       <Media refer={mediaRef} />
       <Contactus refer={contactRef} />
-      <Footer executeScroll={executeScroll} refs={ref}/>
+      <Footer executeScroll={executeScroll} refs={ref} />
     </div>
   );
 }
