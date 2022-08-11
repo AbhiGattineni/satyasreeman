@@ -7,7 +7,7 @@ import image2 from "../images/image2.jpg";
 
 const WhoWeAre = ({ refer }) => {
     return (
-        <div className="w-full bg-white" ref={refer} id="whoweare">
+        <div className="container mx-auto px-4 bg-white" ref={refer} id="whoweare">
             {console.log(refer)}
             <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
@@ -20,9 +20,6 @@ const WhoWeAre = ({ refer }) => {
                         <Card image={image1} />
                         <Card image={image2} />
                     </div>
-                </div>
-                <div class="lg:m-8">
-                    <Partner />
                 </div>
             </div>
 

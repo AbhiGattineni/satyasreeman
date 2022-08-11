@@ -5,7 +5,7 @@ import Verticalcard from "../Components/Verticalcard";
 
 const Whatwedo = ({ refer }) => {
     return (
-        <div className="w-full bg-white " ref={refer} id="whatwedo">
+        <div className="container mx-auto px-4 bg-white" ref={refer} id="whatwedo">
             <div className="md:grid md:grid-rows-4">
                 <div className="md:row-span-1 flex justify-center items-center">
                     <div className="text-3xl font-bold">
