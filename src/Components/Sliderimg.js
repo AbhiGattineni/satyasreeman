@@ -40,9 +40,19 @@ function Sliderimg({ executeScroll, refs }) {
     const showSideMenu = () => {
         (isSideMenuOpen) ? setisSideMenuOpen(false) : setisSideMenuOpen(true)
     }
+    const [color, setcolor] = useState(false)
+    const changeColor = () => {
+        if (window.scrollY >= 500) {
+            setcolor(true)
+        }
+        else {
+            setcolor(false)
+        }
+    }
+    window.addEventListener('scroll', changeColor)
     return (
         <div>
-            <div className='flex flex-row justify-between drop-shadow-md px-5 bg-opacity-0 sticky top-0'>
+            <div className='flex flex-row justify-between drop-shadow-md px-5 w-full fixed top-0' id={color ? 'navc' : 'navt'}>
                 <div className='md:columns-3 logo p-6 text-xl md:text-md drop-shadow-lg text-black font-bold text-white'>
                     <h1>SatyaSreeman</h1>
                 </div>

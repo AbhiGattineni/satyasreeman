@@ -11,9 +11,10 @@ const Media = ({ refer }) => {
                 </div>
                 <div className="md:row-span-3 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center">
                     {data.map((item) => (
-                        <div className="mx-5 mb-5">
-                            <img className="hover:shadow-2xl hover:scale-110 ease-in-out duration-300" src={item.img} alt=""></img>
-                            <p className="ml-12 py-3 text-center">{item.Description}</p>
+                        <div>
+                            <img className="w-[200px] h-[200px] hover:shadow-2xl hover:scale-110 m-2 ease-in-out duration-300" src={item.img} alt=""></img>
+                            <p className="ml-12 py-3">{item.Description}</p>
+
                         </div>
                     ))}
                 </div>
