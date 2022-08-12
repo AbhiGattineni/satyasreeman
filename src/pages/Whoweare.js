@@ -13,7 +13,11 @@ const WhoWeAre = ({ refer }) => {
                         <div className="md:row-span-1 text-7xl font-sans">
                             Leading The Way.
                         </div>
-                        <p className="flex flex-row items-center mt-3">We believe that the fundamental role of leadership is to create and maintain a culture that strengthens the company's core values, encourages employees to do the right thing, and helps drive the company's long-term strategy. All delivered with humility and compassion.</p>
+                        <div className="flex flex-row items-center mt-3">
+                            <div className="grid grid-cols-1 lg:grid-cols-2">
+                                We believe that the fundamental role of leadership is to create and maintain a culture that strengthens the company's core values, encourages employees to do the right thing, and helps drive the company's long-term strategy. All delivered with humility and compassion.
+                            </div>
+                        </div>
                         <div className="flex flex-row items-center text-rose-800 font-bold mt-3">
                             <div className="mr-3"><BsArrowRight /></div>
                             <div>Meet Our Leaders & Team</div>
