@@ -10,28 +10,28 @@ const Footer = ({ executeScroll, refs }) => {
                     <li to="bussiness" onClick={() => {
                         executeScroll(refs.businessRef);
                         if (isOpen) setOpen(false);
-                    }}><div className="text-white cursor-pointer">Business</div></li>
+                    }}><div className="text-white cursor-pointer p-3">Business</div></li>
                     <li to="whatwedo" onClick={() => {
                         executeScroll(refs.whatWeDoRef);
                         if (isOpen) setOpen(false);
-                    }}><div className="text-white cursor-pointer">What We Do</div></li>
+                    }}><div className="text-white cursor-pointer p-3">What We Do</div></li>
                     <li to="whoweare" onClick={() => {
                         executeScroll(refs.whoWeAreRef);
                         if (isOpen) setOpen(false);
-                    }}><div className="text-white cursor-pointer">Who We Are</div></li>
+                    }}><div className="text-white cursor-pointer p-3">Who We Are</div></li>
                     <li to="media" onClick={() => {
                         executeScroll(refs.mediaRef);
                         if (isOpen) setOpen(false);
-                    }}><div className="text-white cursor-pointer">Media</div></li>
+                    }}><div className="text-white cursor-pointer p-3">Media</div></li>
                     <li to="contactus" onClick={() => {
                         executeScroll(refs.contactRef);
                         if (isOpen) setOpen(false);
-                    }}><div className="text-white cursor-pointer">Contact Us</div></li>
+                    }}><div className="text-white cursor-pointer p-3">Contact Us</div></li>
 
                 </div>
                 <div className="border-t-2 border-grey-300 mx-5"></div>
-                <div className="flex flex-row justify-between">
-                    <div className="flex flex-row justify-left">
+                <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
+                    <div className="flex grid-cols-4 gap-3 lg:place-content-start place-content-center md:place-content-start">
                         <div><BsFacebook className='m-3 mx-5 text-white' size={20} onClick={() =>
                             window.open(
                                 "https://www.facebook.com/abhi.gattineni/",
@@ -46,19 +46,19 @@ const Footer = ({ executeScroll, refs }) => {
                         } /></div>
                         <div><BsLinkedin className='m-3 mx-5 text-white' size={20} onClick={() =>
                             window.open(
-                                "https://www.liedin.com/in/abhishek-gattineni-05937088/",
+                                "https://www.linkedin.com/in/abhishek-gattineni-05937088/",
                                 "_blank"
                             )
                         } /></div>
                         <div><BsYoutube className='m-3 mx-5 text-white' size={20} onClick={() =>
                             window.open(
-                                "https://www.liedin.com/in/abhishek-gattineni-05937088/",
+                                "https://www.linkedin.com/in/abhishek-gattineni-05937088/",
                                 "_blank"
                             )
                         } /></div>
                     </div>
-                    <div className="flex flex-col m-3">
-                        <div className="text-sm text-right text-white">Satya Sreeman Engineering & Contractors Ltd</div>
+                    <div className="m-3">
+                        <div className="text-sm lg:text-right md:text-right text-center text-white">Satya Sreeman Engineering & Contractors Ltd</div>
                         {/* <div className="text-sm text-right text-white">Registerd Office Address</div>
                         <div className="text-sm text-right text-white">D.No:6-1132/C</div>
                         <div className="text-sm text-right text-white">Hyderabad</div>

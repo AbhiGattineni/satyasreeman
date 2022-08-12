@@ -7,34 +7,39 @@ const Careerresume = (props) => {
                 {props.tag}
             </div>
             <div className="flex justify-center px-8 p-3">
-                <input type="text" id="username" className="border-b py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
-                <label for="username" className="">Name *</label>
-
+                <div className="relative">
+                    <input type="text" id="username" className="border-b w-2/3 py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
+                    <label for="username" className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all">Name *</label>
+                </div>
             </div>
             <div className="flex justify-center px-8 p-3">
-                <input type="number" id="username" className="border-b py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
-                <label for="username" className="">Phone *</label>
-
+                <div className="relative">
+                    <input type="tel" id="username" className="border-b w-2/3 py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
+                    <label for="username" className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all">Phone *</label>
+                </div>
             </div>
             <div className="flex justify-center px-8 p-3">
-                <input type="email" id="username" className="border-b py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
-                <label for="username" className="">E-mail *</label>
-
+                <div className="relative">
+                    <input type="email" id="username" className="border-b w-2/3 py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
+                    <label for="username" className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all">E-mail *</label>
+                </div>
             </div>
             <div className="flex justify-center px-8 p-3">
-                <input type="text" id="username" className="border-b py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
-                <label for="username" className="">City *</label>
-
+                <div className="relative">
+                    <input type="text" id="username" className="border-b w-2/3 py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
+                    <label for="username" className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all">City *</label>
+                </div>
             </div>
             {props.tag === 'Write To Us' ?
                 <div className="flex justify-center px-8 p-3">
-                    <input type="text" id="message" className="border-b py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
-                    <label for="message" className="">Message*</label>
+                    <div className="relative">
+                        <input type="text" id="message" className="border-b w-2/3 py-1 pr-20 focus:outline-none focus:border-rose-800 border-rose-700 focus:border-b-2 transition-colors peer" autoComplete="off"></input>
+                        <label for="message" className="absolute left-0 top-1 cursor-text peer-focus:text-xs peer-focus:-top-4 transition-all">Message*</label>
+                    </div>
                 </div>
-
                 :
                 <div className="flex justify-center px-8 p-2">
-                    <label>Resume *</label>
+                    <label>Resume*</label>
                     <input type="file"></input>
                 </div>
             }
