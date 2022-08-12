@@ -52,8 +52,8 @@ function Sliderimg({ executeScroll, refs }) {
     window.addEventListener('scroll', changeColor)
     return (
         <div>
-            <div className='flex flex-row justify-between drop-shadow-md px-5 w-full fixed top-0' id={color ? 'navc' : 'navt'}>
-                <div className='md:columns-3 logo p-6 text-xl md:text-md drop-shadow-lg text-black font-bold text-white'>
+            <div className='flex flex-row justify-between drop-shadow-md px-5 w-full fixed top-0 z-10' id={color ? 'navc' : 'navt'}>
+                <div className='md:columns-3 logo p-6 text-xl md:text-md drop-shadow-lg font-bold text-white'>
                     <h1>SatyaSreeman</h1>
                 </div>
                 <div className='md:columns-9 hidden menu justify-items-start drop-shadow-md list-none lg:flex lg:flex-row text-white uppercase my-7 text-sm'>
@@ -69,10 +69,6 @@ function Sliderimg({ executeScroll, refs }) {
                         executeScroll(refs.whoWeAreRef);
                         if (isOpen) setOpen(false);
                     }}>Who We Are</li>
-                    <li className='menu-list mx-5 sm:text-xs decoration-2' onClick={() => {
-                        executeScroll(refs.careersRef);
-                        if (isOpen) setOpen(false);
-                    }}>Careers</li>
                     <li className='menu-list mx-5 sm:text-xs decoration-2' onClick={() => {
                         executeScroll(refs.mediaRef);
                         if (isOpen) setOpen(false);
@@ -91,8 +87,8 @@ function Sliderimg({ executeScroll, refs }) {
                     {(isSideMenuOpen) ? SideMenu() : ''}
                 </button>
             </div>
-            <div ref={slideRef} className="-mt-20 select-none">
-                <img src={Images[currentIndex]} alt="image" className="h-screen w-full"></img>
+            <div ref={slideRef} className="select-none">
+                <img src={Images[currentIndex]} alt="" className="h-full w-full"></img>
             </div>
             <div className='absolute justify-between flex top-1/2 w-full transform -translate-y-1/2 p-2 items-center'>
                 <button onClick={handleOnPrevClick}><GrPrevious /></button>
