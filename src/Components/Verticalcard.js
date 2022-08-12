@@ -3,11 +3,11 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Verticalcard = (props) => {
     return (
-        <div className="grid grid-rows-2 rounded-xl bg-slate-50 backdrop-blur-sm hover:bg-slate-50 hover:shadow-black/50 hover:shadow-xl m-5 border border-radius-2">
-            <div className="row-span-1">
+        <div className=" rounded-xl bg-slate-50 hover:bg-slate-50 hover:shadow-black/50 hover:shadow-xl m-5 border border-radius-2">
+            <div className="">
                 <img className="rounded-t-lg" src={props.image} alt="" />
             </div>
-            <div className="row-span-1">
+            <div className="">
                 <div>
                     <h3 className="text-left mt-5 text-xl font-bold m-5">{props.tag}</h3>
                 </div>
