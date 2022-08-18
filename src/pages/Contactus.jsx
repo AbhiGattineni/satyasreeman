@@ -10,7 +10,7 @@ const Contactus = ({ refer }) => {
                             Contact Us.
                         </div>
                     </div>
-                    <div className="md:row-span-3">
+                    <div className="md:row-span-3 mt-5 sm:mt-0">
                         <div className="text-xl font-bold text-center mx-10 border border-radius-2 rounded-lg">
                             Jobs
                             <div className="m-2 font-light">

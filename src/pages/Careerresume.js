@@ -2,7 +2,7 @@ import React from "react";
 
 const Careerresume = (props) => {
     return (
-        <form className="bg-white m-5 border border-radius-2 border-rose-800 rounded-lg">
+        <form className="bg-white border border-radius-2 border-rose-800 rounded-lg m-3">
             <div className="text-xl font-bold text-center m-3">
                 {props.tag}
             </div>

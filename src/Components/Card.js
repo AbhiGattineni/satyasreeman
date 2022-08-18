@@ -8,7 +8,7 @@ const Card = (props) => {
             </div>
             <div className="basis-1/2">
                 <div>
-                    <h3 className="text-left mt-5 text-xl font-bold underline hover:underline-offset-8 m-8 cursor-pointer">John Kray</h3>
+                    <h3 className="text-left mt-5 text-xl font-bold underline hover:underline-offset-8 m-8 cursor-pointer">{props.name}</h3>
                 </div>
                 <div className="m-8 text-left">
                     <p>Lorem Ipsum is simply Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
