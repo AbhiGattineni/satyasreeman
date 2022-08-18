@@ -34,32 +34,32 @@ export const data = [
         Description: "SatyaSreeman",
     },
     {
-        id: 1,
+        id: 7,
         img: image1,
         Description: "SatyaSreeman",
     },
     {
-        id: 2,
+        id: 8,
         img: image2,
         Description: "SatyaSreeman",
     },
     {
-        id: 3,
+        id: 9,
         img: image3,
         Description: "SatyaSreeman",
     },
     {
-        id: 4,
+        id: 10,
         img: image3,
         Description: "SatyaSreeman",
     },
     {
-        id: 5,
+        id: 11,
         img: image3,
         Description: "SatyaSreeman",
     },
     {
-        id: 6,
+        id: 12,
         img: image3,
         Description: "SatyaSreeman",
     },

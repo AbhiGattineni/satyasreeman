@@ -30,7 +30,7 @@ const WhoWeAre = ({ refer }) => {
                         <Card image={image2} name={"Raja Gopal Gattineni"} />
                     </div>
                 </div>
-                <div class="md:row-span-1"></div>
+                <div className="md:row-span-1"></div>
             </div>
         </div>
     )

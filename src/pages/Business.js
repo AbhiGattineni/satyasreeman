@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 const Business = ({ refer }) => {
     return (
         <div className="px-4 bg-slate-100" ref={refer} id="bussiness">
-            <div class="container mx-auto">
+            <div className="container mx-auto pt-10 md:pt-0">
                 <div className="md:grid md:grid-cols-3">
                     <div className="row-span-1 md:col-span-1 md:h-screen flex justify-center items-center">
                         <div className="text-3xl font-bold">
@@ -12,7 +12,7 @@ const Business = ({ refer }) => {
                         </div>
                     </div>
                     <div className="row-span-2 md:col-span-2  m-5 flex justify-center items-center">
-                        <div class="grid grid-rows">
+                        <div className="grid grid-rows">
                             <div className="mt-5">
                                 Established in 1897, the Godrej Group has its roots in India's Independence and Swadeshi movement. Our founder, Ardeshir Godrej, lawyer-turned-serial entrepreneur failed with a few ventures, before he struck gold with a locks business.
                             </div>

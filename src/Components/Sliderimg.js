@@ -34,7 +34,6 @@ function Sliderimg({ executeScroll, refs }) {
     const startSlider = () => {
         setInterval(() => {
             handleOnNextClick()
-            console.log("slider")
         }, 3000);
     }
 
@@ -89,7 +88,7 @@ function Sliderimg({ executeScroll, refs }) {
                 </button>
             </div>
             <div ref={slideRef} className="select-none">
-                <img alt="" className="bg-image1 bg-cover bg-center bg-no-repeat"></img>
+                <img src={Images[currentIndex]} alt="" className=""></img>
             </div>
             <div className='absolute justify-between flex top-1/2 w-full transform -translate-y-1/2 p-2 items-center'>
                 <button onClick={handleOnPrevClick}><GrPrevious /></button>

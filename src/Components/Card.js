@@ -4,7 +4,7 @@ const Card = (props) => {
     return (
         <div className="rounded-xl flex flex-col md:flex-row bg-slate-50 hover:bg-slate-50 hover:shadow-black/50 hover:shadow-xl m-5 border border-radius-2">
             <div className="basis-1/2">
-                <img class="h-full rounded-xl" src={props.image} alt="" />
+                <img className="h-full rounded-xl" src={props.image} alt="" />
             </div>
             <div className="basis-1/2">
                 <div>
