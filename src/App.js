@@ -12,7 +12,6 @@ import Contactus from './pages/Contactus';
 import Footer from './pages/Footer';
 import Partner from './pages/Partner';
 
-
 function App() {
   const businessRef = useRef(null);
   const whatWeDoRef = useRef(null);

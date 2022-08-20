@@ -9,10 +9,10 @@ import { GrPrevious } from "react-icons/gr";
 import { GoMail } from "react-icons/go";
 import "./nav.css";
 
-let count = 0;
 function Sliderimg({ executeScroll, refs }) {
     const [isSideMenuOpen, setisSideMenuOpen] = useState(false);
-    const [isOpen, setOpen] = useState(false);;
+    const [isOpen, setOpen] = useState(false);
+    let count = 0;
 
     const Images = [image1, image2, image3];
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -28,14 +28,10 @@ function Sliderimg({ executeScroll, refs }) {
 
     const slideRef = useRef()
     useEffect(() => {
-        startSlider();
-    }, [])
-
-    const startSlider = () => {
         setInterval(() => {
             handleOnNextClick()
         }, 3000);
-    }
+    }, [])
 
     const showSideMenu = () => {
         (isSideMenuOpen) ? setisSideMenuOpen(false) : setisSideMenuOpen(true)
@@ -88,7 +84,7 @@ function Sliderimg({ executeScroll, refs }) {
                 </button>
             </div>
             <div ref={slideRef} className="select-none">
-                <img src={Images[currentIndex]} alt="" className=""></img>
+                <img src={Images[currentIndex]} alt="" className="h-screen object-cover md:w-full"></img>
             </div>
             <div className='absolute justify-between flex top-1/2 w-full transform -translate-y-1/2 p-2 items-center'>
                 <button onClick={handleOnPrevClick}><GrPrevious /></button>
