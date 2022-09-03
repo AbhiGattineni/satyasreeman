@@ -15,7 +15,7 @@ const WhoWeAre = ({ refer }) => {
                         </div>
                         <div className="grid md:grid-cols-3 mt-5">
                             <div className="md:col-span-2 lg:col-span-1 text-sm">
-                                We believe that the fundamental role of leadership is to create and maintain a culture that strengthens the company's core values, encourages employees to do the right thing, and helps drive the company's long-term strategy. All delivered with humility and compassion.
+                                We believe that fundamental role of leadership is to create and maintain a culture that strengthens the company's core values, encourages employees to do the right thing, and helps drive the company's long-term strategy. All delivered with humility and compassion.
                             </div>
                         </div>
                         <div className="flex flex-row items-center text-rose-800 font-bold mt-5">
