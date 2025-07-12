@@ -13,9 +13,9 @@ const Whatwedo = ({ refer }) => {
                     </div>
                 </div>
                 <div className="md:row-span-2 md:grid md:grid-cols-2 lg:grid-cols-3">
-                    <Verticalcard image={image1} tag={"General Engineering"} />
-                    <Verticalcard image={image2} tag={"Heavy Engineering"} />
-                    <Verticalcard image={image3} tag={"Infrastructute"} />
+                    <Verticalcard image={image1} tag={"General Engineering"} description={"SatyaSreeman focuses on manufacturing specialized machinery and equipment that meet exacting industry specifications. We deliver custom solutions to clients in sectors requiring high-precision mechanical components and systems."} />
+                    <Verticalcard image={image2} tag={"Heavy Engineering"} description={"With core expertise in large-scale industrial plant support, we undertake fabrication and assembly tasks for heavy-duty operations. This includes critical machinery support and integration work executed with structural strength and reliability."} />
+                    <Verticalcard image={image3} tag={"Infrastructure"} description={"Positioned near Hyderabad, SatyaSreeman offers infrastructure-based engineering services, including site-based support and civil fabrication. Projects are approached with a focus on delivery integrity, industry standards, and long-term client utility."} />
                 </div>
             </div>
         </div>
