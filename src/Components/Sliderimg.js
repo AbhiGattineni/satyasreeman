@@ -12,25 +12,22 @@ import "./nav.css";
 function Sliderimg({ executeScroll, refs }) {
     const [isSideMenuOpen, setisSideMenuOpen] = useState(false);
     const [isOpen, setOpen] = useState(false);
-    let count = 0;
 
     const Images = [image1, image2, image3];
     const [currentIndex, setCurrentIndex] = useState(0)
     const handleOnNextClick = () => {
-        count = (count + 1) % Images.length;
-        setCurrentIndex(count);
+        setCurrentIndex(prevIndex => (prevIndex + 1) % Images.length);
     }
     const handleOnPrevClick = () => {
-        const productsLength = Images.length;
-        count = (currentIndex + productsLength - 1) % productsLength;
-        setCurrentIndex(count);
+        setCurrentIndex(prevIndex => (prevIndex - 1 + Images.length) % Images.length);
     }
 
     const slideRef = useRef()
     useEffect(() => {
-        setInterval(() => {
+        const interval = setInterval(() => {
             handleOnNextClick()
         }, 3000);
+        return () => clearInterval(interval);
     }, [])
 
     const showSideMenu = () => {
@@ -66,6 +63,10 @@ function Sliderimg({ executeScroll, refs }) {
                         if (isOpen) setOpen(false);
                     }}>Who We Are</li>
                     <li className='menu-list mx-5 sm:text-xs decoration-2 cursor-pointer' onClick={() => {
+                        executeScroll(refs.careersRef);
+                        if (isOpen) setOpen(false);
+                    }}>Careers</li>
+                    <li className='menu-list mx-5 sm:text-xs decoration-2 cursor-pointer' onClick={() => {
                         executeScroll(refs.mediaRef);
                         if (isOpen) setOpen(false);
                     }}>Media</li>
@@ -80,7 +81,7 @@ function Sliderimg({ executeScroll, refs }) {
                 </div>
                 <button onClick={() => { showSideMenu() }} className='lg:hidden menu-button text-white'>
                     {(isSideMenuOpen) ? <CgClose /> : <FaBars />}
-                    {(isSideMenuOpen) ? SideMenu() : ''}
+                    {(isSideMenuOpen) ? <SideMenu executeScroll={executeScroll} refs={refs} /> : ''}
                 </button>
             </div>
             <div ref={slideRef} className="select-none">
@@ -94,15 +95,16 @@ function Sliderimg({ executeScroll, refs }) {
     );
 }
 
-function SideMenu() {
+function SideMenu({ executeScroll, refs }) {
     return (
         <div className='fixed drop-shadow-md h-screen w-full sm:w-1/2 md:w-2/5 bg-black top-0 left-0'>
             <div className='menu list-none text-white flex flex-col text-center mt-14 uppercase py-5 text-sm font-bold'>
-                <li className='menu-list py-3 hover:border-2' ><a href='#bussiness' className='px-10' >Business</a></li>
-                <li className='menu-list py-3 hover:border-2'><a href='#whatwedo' className='px-10'>What We Do</a></li>
-                <li className='menu-list py-3 hover:border-2'><a href='#whoweare' className='px-10'>Who We Are</a></li>
-                <li className='menu-list py-3 hover:border-2'><a href='#media' className='px-10'>Media</a></li>
-                <li className='menu-list py-3 hover:border-2'><a href='#contactus' className='px-10'>Contact Us</a></li>
+                <li className='menu-list py-3 hover:border-2' onClick={() => executeScroll(refs.businessRef)}>Business</li>
+                <li className='menu-list py-3 hover:border-2' onClick={() => executeScroll(refs.whatWeDoRef)}>What We Do</li>
+                <li className='menu-list py-3 hover:border-2' onClick={() => executeScroll(refs.whoWeAreRef)}>Who We Are</li>
+                <li className='menu-list py-3 hover:border-2' onClick={() => executeScroll(refs.careersRef)}>Careers</li>
+                <li className='menu-list py-3 hover:border-2' onClick={() => executeScroll(refs.mediaRef)}>Media</li>
+                <li className='menu-list py-3 hover:border-2' onClick={() => executeScroll(refs.contactRef)}>Contact Us</li>
             </div>
         </div>
     );

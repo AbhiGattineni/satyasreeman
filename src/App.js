@@ -16,10 +16,11 @@ function App() {
   const businessRef = useRef(null);
   const whatWeDoRef = useRef(null);
   const whoWeAreRef = useRef(null);
+  const careersRef = useRef(null);
   const mediaRef = useRef(null);
   const contactRef = useRef(null);
 
-  const ref = { businessRef, whatWeDoRef, whoWeAreRef, mediaRef, contactRef };
+  const ref = { businessRef, whatWeDoRef, whoWeAreRef, careersRef, mediaRef, contactRef };
 
   const executeScroll = (componentRef) => {
     // console.log(componentRef.current)
@@ -31,6 +32,7 @@ function App() {
       <Business refer={businessRef} />
       <Whatwedo refer={whatWeDoRef} />
       <WhoWeAre refer={whoWeAreRef} />
+      <Careers refer={careersRef} />
       <Partner />
       <Media refer={mediaRef} />
       <Contactus refer={contactRef} />

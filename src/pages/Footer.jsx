@@ -7,7 +7,7 @@ const Footer = ({ executeScroll, refs }) => {
         <div className="bg-slate-800">
             <div className="container mx-auto px-4">
                 <div className="flex justify-between p-5 list-none place-content-between">
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
                         <li to="bussiness" onClick={() => {
                             executeScroll(refs.businessRef);
                             if (isOpen) setOpen(false);
@@ -20,6 +20,10 @@ const Footer = ({ executeScroll, refs }) => {
                             executeScroll(refs.whoWeAreRef);
                             if (isOpen) setOpen(false);
                         }}><div className="text-white cursor-pointer p-3">Who We Are</div></li>
+                        <li to="careers" onClick={() => {
+                            executeScroll(refs.careersRef);
+                            if (isOpen) setOpen(false);
+                        }}><div className="text-white cursor-pointer p-3">Careers</div></li>
                         <li to="media" onClick={() => {
                             executeScroll(refs.mediaRef);
                             if (isOpen) setOpen(false);
