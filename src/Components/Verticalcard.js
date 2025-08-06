@@ -7,7 +7,7 @@ const Verticalcard = (props) => {
             <img className="rounded-t-lg" src={props.image} alt="" />
             <h3 className="text-left mt-5 text-xl font-bold m-5">{props.tag}</h3>
             <div className="m-5 text-left">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p>{props.description}</p>
                 <div className="flex flex-row items-center font-medium mt-5 ">
                     <div>Read More</div>
                     <div className="ml-3 text-rose-800 "><BsArrowRight /></div>

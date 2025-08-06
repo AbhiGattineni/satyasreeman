@@ -26,8 +26,8 @@ const WhoWeAre = ({ refer }) => {
                 </div>
                 <div className='md:row-span-2 bg-white mt-14'>
                     <div className="grid lg:grid-cols-2 grid-cols-1">
-                        <Card image={image1} name={"Subba Rao Gattineni"} />
-                        <Card image={image2} name={"Raja Gopal Gattineni"} />
+                        <Card image={image1} name={"Subba Rao Gattineni"} description={"Venkata Subbarao Gattineni serves as a director at SatyaSreeman Engineering Contractors. He has overseen the company's strategic and operational direction since its incorporation in Hyderabad. Known for his commitment to engineering excellence, Subbarao leads company initiatives in manufacturing special-purpose machinery and delivering custom industrial solutions. He is deeply involved in shaping the company’s long-term vision and driving quality across all functions."} />
+                        <Card image={image2} name={"Raja Gopal Gattineni"} description={"Raja Gopal Gattineni is also a director of the company, bringing leadership and continuity to the firm’s development. He contributes to overseeing key projects and maintaining client trust through disciplined implementation and a focus on operational integrity. His role extends across planning and execution, ensuring that every engagement aligns with client expectations and regulatory standards. Raja Gopal’s presence in the leadership team reinforces the company’s emphasis on trust and transparency."} />
                     </div>
                 </div>
                 <div className="md:row-span-1"></div>

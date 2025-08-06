@@ -12,21 +12,21 @@ const Business = ({ refer }) => {
                         </div>
                     </div>
                     <div className="row-span-2 md:col-span-2  m-5 flex justify-center items-center">
-                        <div className="grid grid-rows">
+                        <div className="grid grid-rows max-w-3xl mx-auto text-justify">
                             <div className="mt-5">
-                                Established in 1897, the Godrej Group has its roots in India's Independence and Swadeshi movement. Our founder, Ardeshir Godrej, lawyer-turned-serial entrepreneur failed with a few ventures, before he struck gold with a locks business.
+SatyaSreeman Engineering Contractors is an established and reputed player in India’s engineering and contracting ecosystem. Founded with a vision to drive purposeful infrastructure and industrial development, the company has expanded its presence across key regions, delivering tailored engineering solutions that support national growth.
                             </div>
                             <div className="mt-5">
-                                Today, we enjoy the patronage of 1.1 billion consumers globally across consumer goods, real estate, appliances, agriculture and many other businesses. In fact, our geographical footprint extends beyond Earth, with our engines now powering many of India's space missions.
+Our journey has been shaped by a focus on quality, precision, and client-first values. We actively contribute to core sectors such as civil construction, structural fabrication, and industrial support services, helping bridge the gap between design and execution across various domains.
                             </div>
                             <div className="mt-5">
-                                With a revenue of over USD 4.1 billion we are growing fast, and have exciting, ambitious aspirations.
+We take immense pride in contributing to engineering excellence through disciplined project management, innovative thinking, and timely delivery. Our strength lies in our skilled teams and the trust we’ve earned from clients, partners, and collaborators over time.
                             </div>
                             <div className="mt-5">
-                                But for us, it is most important that besides our strong financial performance and innovative, much-loved products, we remain a good company. Approximately 23 per cent of the promoter holding in the Godrej Group is held in trusts that invest in the environment, health and education. We are also bringing together our passion and purpose to make a difference through our Good & Green strategy of 'shared value' to create a more inclusive and greener India.
+SatyaSreeman is also aligned with forward-looking practices that embrace safety, sustainability, and workforce empowerment. Our approach is deeply rooted in transparency and continuous improvement—ensuring every project reflects accountability, care, and a long-term vision.
                             </div>
                             <div className="mt-5">
-                                At the heart of all of this, is our people. We take much pride in fostering an inspiring workplace, with an agile and high-performance culture. We are also deeply committed to recognising and valuing diversity across our teams.
+At the center of our growth is our commitment to people. We empower our teams with an open, performance-driven work culture and strive to build enduring value through meaningful relationships and reliable engineering solutions.
                             </div>
                             <div className="flex flex-row items-center text-rose-800 font-bold mt-5">
                                 <div className="mr-3"><BsArrowRight /></div>
