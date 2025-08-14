@@ -3,8 +3,13 @@ import React from "react";
 const Card = (props) => {
     return (
         <div className="rounded-xl flex flex-col md:flex-row bg-slate-50 hover:bg-slate-50 hover:shadow-black/50 hover:shadow-xl m-5 border border-radius-2">
-            <div className="basis-1/2">
-                <img className="h-full rounded-xl" src={props.image} alt="" />
+            <div className="basis-1/2 flex items-center justify-center p-4">
+                <img 
+                    className="w-full h-auto max-h-96 object-cover rounded-xl" 
+                    src={props.image} 
+                    alt={props.name}
+                    style={{ aspectRatio: 'auto' }}
+                />
             </div>
             <div className="basis-1/2">
                 <div>
